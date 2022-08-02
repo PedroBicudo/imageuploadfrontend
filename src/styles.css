@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* Variables */
+:root {
+  /* Colors */
+  --clr-white-1: #FFFFFF;
+  --clr-white-2: #FAFAFB;
+  --clr-white-3: #F6F8FB;
+
+  --clr-gray-1: #BDBDBD;
+  --clr-gray-2: #A9A9A9;
+  --clr-gray-3:  #828282;
+  --clr-gray-4: #4F4F4F;
+
+  --clr-blue-1: #97BEF4;
+  --clr-blue-2:  #2F80ED;
+  --clr-green-1: #219653;
+
+  color: var(--clr-gray-4);
+}
+
+/* Typography */
+body {
+  font-family: 'Poppins', sans-serif;
+
+  /* Font size */
+}
