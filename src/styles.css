@@ -7,6 +7,10 @@ html {
   box-sizing: inherit;
 }
 
+p {
+  margin: 0;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -33,7 +37,8 @@ body {
 
 /* Typography */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif; /*400, 600*/
 
   /* Font size */
+  --fs-sm: 0.875rem; /* 14px */
 }

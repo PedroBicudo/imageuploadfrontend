@@ -1,0 +1,28 @@
+.content {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  background-color: var(--clr-white-2);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.footer-created {
+  font-size: var(--fs-sm);
+}
+
+.footer-created__link {
+  color: var(--clr-gray-3);
+  font-weight: 600;
+}
+
+.footer-created__link:hover,
+.footer-created__link:active,
+.footer-created__link:focus {
+  color: var(--clr-gray-3);
+}
