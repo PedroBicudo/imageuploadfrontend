@@ -1,0 +1,12 @@
+.image-card {
+  margin: 0 auto;
+  padding: 2.25em 2em;
+  border-radius: 12px;
+  background-color: var(--clr-white-1);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 402px;
+}
+
+.hide {
+  display: none !important;
+}

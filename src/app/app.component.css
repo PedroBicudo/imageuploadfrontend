@@ -2,7 +2,11 @@
   min-height: 100vh;
   display: grid;
   grid-template-rows: 1fr auto;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
   background-color: var(--clr-white-2);
+  padding: 1em;
 }
 
 footer {

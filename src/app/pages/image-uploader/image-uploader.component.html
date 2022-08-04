@@ -1,0 +1,7 @@
+<app-image-uploader-card>
+  <app-image-select *ngIf="hideSelect"></app-image-select>
+  <app-image-uploading
+    *ngIf="hideUploading"
+    [file]="selectFile"
+  ></app-image-uploading>
+</app-image-uploader-card>

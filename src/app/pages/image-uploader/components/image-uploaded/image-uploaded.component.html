@@ -1,0 +1,27 @@
+<app-image-uploader-card>
+  <div class="image-uploaded">
+    <header class="image-uploaded__header">
+      <span class="image-uploaded__icon">
+        <i class="fa-solid fa-circle-check "></i>
+      </span>
+      <h2 class="image-uploaded__title">Uploaded Successfully!</h2>
+    </header>
+    <div class="image-uploaded__result">
+      <div class="image-uploaded__pic">
+        <img [src]="image" class="image-uploaded__img">
+      </div>
+      <div class="image-uploaded__link-container">
+        <input
+          type="url"
+          [value]="imageUrl"
+          class="image-uploaded__link"
+          readonly
+          #link
+        >
+        <button (click)="onCopy(link.value)" class="image-uploaded__btn">
+          Copy Link
+        </button>
+      </div>
+    </div>
+  </div>
+</app-image-uploader-card>

@@ -4,15 +4,29 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ImageUploaderComponent } from './pages/image-uploader/image-uploader.component';
+import { NgxDropzoneModule } from 'ngx-dropzone';
+import { ClipboardModule } from '@angular/cdk/clipboard';
+import { ImageSelectComponent } from './pages/image-uploader/components/image-select/image-select.component';
+import { ImageUploadingComponent } from './pages/image-uploader/components/image-uploading/image-uploading.component';
+import { ImageUploadedComponent } from './pages/image-uploader/components/image-uploaded/image-uploaded.component';
+import { ImageUploaderCardComponent } from './shared/components/image-uploader-card/image-uploader-card.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ImageUploaderComponent,
+    ImageSelectComponent,
+    ImageUploadingComponent,
+    ImageUploadedComponent,
+    ImageUploaderCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxDropzoneModule,
+    ClipboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

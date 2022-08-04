@@ -1,0 +1,28 @@
+<div class="image-select">
+  <header class="image-select__header">
+    <h2 class="image-select__title">Upload your image</h2>
+    <p class="image-select__description">File should be Jpeg, Png,...</p>
+  </header>
+  <div class="option-zones">
+    <div
+      class="drop-zone"
+      [multiple]="false"
+      [disableClick]="true"
+      accept="image/*"
+      (change)="onSelect($event)"
+      ngx-dropzone
+      #dropzone
+    >
+      <picture class="drop-zone__pic">
+        <img class="drop-zone__img" src="/assets/img/image.svg">
+      </picture>
+      <span class="drop-zone__text">Drag & Drop your image here</span>
+    </div>
+    <div class="btn-zone" (click)="dropzone.showFileSelector()">
+      <span class="btn-zone__text">Or</span>
+      <button
+        class="btn-zone__btn"
+      >Choose a file</button>
+    </div>
+  </div>
+</div>
