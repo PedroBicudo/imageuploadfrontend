@@ -11,6 +11,7 @@ import { ImageSelectComponent } from './pages/image-uploader/components/image-se
 import { ImageUploadingComponent } from './pages/image-uploader/components/image-uploading/image-uploading.component';
 import { ImageUploadedComponent } from './pages/image-uploader/components/image-uploaded/image-uploaded.component';
 import { ImageUploaderCardComponent } from './shared/components/image-uploader-card/image-uploader-card.component';
+import { DialogComponent } from './shared/components/dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ImageUploaderCardComponent } from './shared/components/image-uploader-c
     ImageSelectComponent,
     ImageUploadingComponent,
     ImageUploadedComponent,
-    ImageUploaderCardComponent
+    ImageUploaderCardComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,

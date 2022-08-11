@@ -34,6 +34,7 @@ body {
   --clr-blue-2:  #2F80ED;
   --clr-blue-3:  #0051bb;
   --clr-green-1: #219653;
+  --clr-red-1: #ff3333;
 
   color: var(--clr-gray-4);
 }
