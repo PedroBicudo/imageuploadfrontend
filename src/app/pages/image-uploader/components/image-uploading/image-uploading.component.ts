@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ImagesService } from 'src/app/shared/services/images/images.service';
-import { ImagePath } from 'src/app/pages/image-uploader/components/image-uploading/model/image-path.model';
 import { Router } from '@angular/router';
+import { ImagePath } from 'src/app/pages/image-uploader/components/image-uploading/model/image-path.model';
+import { ImagesService } from 'src/app/shared/services/images/images.service';
 
 @Component({
   selector: 'app-image-uploading',
@@ -12,6 +12,9 @@ export class ImageUploadingComponent implements OnInit {
 
   @Input() file!: File;
   uploading: boolean = false;
+
+  isError: boolean = false;
+  errorMessage: string = "";
 
   constructor(
     private imagesApiService: ImagesService,
@@ -32,6 +35,10 @@ export class ImageUploadingComponent implements OnInit {
           setTimeout(() => {
             this.route.navigate(["/uploaded/photos/", image.name]);
           }, 500);
+        },
+        error: (error: any) => {
+          this.isError = true;
+          this.errorMessage = "An error has occurred while uploading the image. Check if your image has at most 5MB.";
         }
       })
   }

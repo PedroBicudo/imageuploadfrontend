@@ -2,6 +2,7 @@ import { Clipboard } from '@angular/cdk/clipboard';
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
+import { ApiError } from 'src/app/shared/models/api-error.model';
 import { ImagesService } from 'src/app/shared/services/images/images.service';
 import { environment } from 'src/environments/environment';
 
@@ -15,6 +16,8 @@ export class ImageUploadedComponent implements OnInit {
   imageUrl!: string;
   image!: SafeUrl;
 
+  isError: boolean = false;
+  errorMessage: string = "";
 
   constructor(
     private activeRoute: ActivatedRoute,
@@ -32,6 +35,11 @@ export class ImageUploadedComponent implements OnInit {
       next: (imageFound: any) => {
         const url = URL.createObjectURL(imageFound);
         this.image = this.sanitizer.bypassSecurityTrustUrl(url);
+      },
+      error: async ({error}: any) => {
+        const response = JSON.parse(await (error as Blob).text()) as ApiError;
+        this.isError = true;
+        this.errorMessage = response.message;
       }
     });
 

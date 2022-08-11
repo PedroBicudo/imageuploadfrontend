@@ -1,3 +1,8 @@
+<app-dialog
+  [open]="isError"
+  [description]="errorMessage"
+  *ngIf="isError">
+</app-dialog>
 <div class="image-uploading hide">
   <div class="image-uploading__header">
     <h2 class="image-uploading__title">Uploading...</h2>

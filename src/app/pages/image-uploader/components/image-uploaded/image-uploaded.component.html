@@ -1,8 +1,13 @@
+<app-dialog
+  [open]="isError"
+  [description]="errorMessage"
+  *ngIf="isError">
+</app-dialog>
 <app-image-uploader-card>
-  <div class="image-uploaded">
+  <div class="image-uploaded" *ngIf="!isError">
     <header class="image-uploaded__header">
       <span class="image-uploaded__icon">
-        <i class="fa-solid fa-circle-check "></i>
+        <i class="fa-solid fa-circle-check"></i>
       </span>
       <h2 class="image-uploaded__title">Uploaded Successfully!</h2>
     </header>
