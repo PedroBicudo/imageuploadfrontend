@@ -1,7 +1,6 @@
 <div align="center">
     <h2>Image uploader Front end</h2>
     <p>Site de upload e acesso de imagens.</p>
-    <a href="https://imageuploader-pedrobicudo.netlify.app/upload">Site</a>
 </div>
 
 ## Motivação
